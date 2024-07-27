@@ -1992,6 +1992,7 @@ a {
 .blocks__column.block-bonus p span {
   color: #FFBD3D;
   display: table;
+  font-weight: 600;
   margin-left: auto;
   margin-right: auto;
 }
@@ -2189,7 +2190,7 @@ a {
 }
 
 .bg.mobile {
-  opacity: 0.3;
+  opacity: 0.5;
 }
 
 .coins-footer {
@@ -2380,6 +2381,10 @@ a {
     display: none !important;
   }
 
+  .blocks__block-bottom-text {
+    transform: translateX(12%);
+  }
+
   .blocks__circle {
     align-items: center;
     border-radius: 40px;
@@ -2410,6 +2415,12 @@ a {
     padding-right: 10px;
     flex: 0 0 291px;
     width: 291px;
+  }
+}
+
+@media screen and (min-width: 961px) {
+  .blocks__block-bottom-text {
+    transform: translateX(6%);
   }
 }
 
