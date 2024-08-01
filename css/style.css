@@ -775,12 +775,13 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  overflow-y: hidden;
-  overflow-x: visible;
+  overflow: hidden;
+  position: relative;
 }
 
 main.main {
   flex: 1;
+  overflow: visible;
   position: relative;
 }
 
@@ -2202,6 +2203,84 @@ a {
   z-index: -1;
 }
 
+.default-page .wrapper {
+  overflow: visible;
+}
+
+.default-page main.main {
+  font-family: "Poppins", sans-serif;
+  padding-bottom: 80px;
+  padding-top: 80px;
+  position: relative;
+}
+
+.default-page main.main h1,
+.default-page main.main h2,
+.default-page main.main h3,
+.default-page main.main h4,
+.default-page main.main h5,
+.default-page main.main h6,
+.default-page main.main p {
+  position: relative;
+  z-index: 2;
+}
+
+.default-page main.main h1 {
+  font-size: 49.2px;
+  font-weight: 700;
+  line-height: 65.32px;
+  letter-spacing: 1.4760488272px;
+  margin: 0 0 27px;
+}
+
+.default-page main.main p {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.4499999881px;
+  margin: 0;
+}
+
+.default-page main.main .coins-header.left.desktop {
+  left: -25px;
+}
+
+.default-page main.main .coins-header.right.desktop {
+  right: 0;
+  top: -9px;
+}
+
+.default-page main.main .coins-bottom {
+  bottom: 0;
+  position: absolute;
+}
+
+.default-page main.main .coins-bottom.left.desktop {
+  left: 0;
+  transform: translateY(32%);
+}
+
+.default-page main.main .coins-bottom.right {
+  transform: translateY(33%);
+}
+
+.default-page main.main .coins-bottom.right.desktop {
+  right: 0;
+}
+
+.default-page main.main .coins-bottom.desktop.left {
+  max-width: 24%;
+}
+
+.default-page main.main .coins-bottom.desktop.right {
+  max-width: 21%;
+}
+
+.default-page main.main .coins-bottom.mobile {
+  right: 0;
+  bottom: -30px;
+}
+
 /* Footer */
 
 .footer {
@@ -2334,6 +2413,10 @@ a {
   }
 
   .coins-header.mobile {
+    display: none;
+  }
+
+  .default-page main.main .coins-bottom.mobile {
     display: none;
   }
 
@@ -2813,6 +2896,27 @@ a {
   }
 
   .coins-header.desktop {
+    display: none;
+  }
+
+  .default-page main.main {
+    padding-bottom: 28px;
+    padding-top: 23px;
+  }
+
+  .default-page main.main h1 {
+    font-size: 25px;
+    line-height: 30px;
+    letter-spacing: 1.4099999666px;
+    margin-bottom: 12px;
+  }
+
+  .default-page main.main p {
+    line-height: 22.5px;
+    letter-spacing: 0.4799999893px;
+  }
+
+  .default-page main.main .coins-bottom.desktop {
     display: none;
   }
 
